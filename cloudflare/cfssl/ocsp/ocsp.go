@@ -10,6 +10,7 @@ package ocsp
 import (
 	"bytes"
 	"crypto"
+	"github.com/wsw365904/newcryptosm"
 	"github.com/wsw365904/newcryptosm/x509"
 	"github.com/wsw365904/newcryptosm/x509/pkix"
 	"io/ioutil"
@@ -57,7 +58,7 @@ type SignRequest struct {
 	// IssuerHash is the hashing function used to hash the issuer subject and public key
 	// in the OCSP response. Valid values are crypto.SHA1, crypto.SHA256, crypto.SHA384,
 	// and crypto.SHA512. If zero, the default is crypto.SHA1.
-	IssuerHash x509.Hash
+	IssuerHash newcryptosm.Hash
 	// If provided ThisUpdate will override the default usage of time.Now().Truncate(time.Hour)
 	ThisUpdate *time.Time
 	// If provided NextUpdate will override the default usage of ThisUpdate.Add(signerInterval)

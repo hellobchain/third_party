@@ -23,7 +23,7 @@ import (
 	"os"
 
 	cttls "github.com/google/certificate-transparency-go/tls"
-	"golang.org/x/crypto/ocsp"
+	"github.com/wsw365904/third_party/ocsp"
 
 	"strings"
 	"time"

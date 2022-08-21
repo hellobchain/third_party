@@ -12,6 +12,7 @@ import (
 	"encoding/asn1"
 	"encoding/pem"
 	"fmt"
+	"github.com/wsw365904/newcryptosm"
 	"github.com/wsw365904/newcryptosm/ecdsa"
 	"github.com/wsw365904/newcryptosm/x509"
 	"io"
@@ -48,9 +49,9 @@ func (s *SigningIdentity) Public() crypto.PublicKey {
 func (s *SigningIdentity) Sign(reader io.Reader, msg []byte, opts crypto.SignerOpts) (signature []byte, err error) {
 	switch pk := s.PrivateKey.(type) {
 	case *ecdsa.PrivateKey:
-		hasher := x509.SHA256.New()
+		hasher := newcryptosm.SHA256.New()
 		if ecdsa.IsSM2(pk.Params()) {
-			hasher = x509.SM3.New()
+			hasher = newcryptosm.SM3.New()
 		}
 		hasher.Write(msg)
 		digest := hasher.Sum(nil)
