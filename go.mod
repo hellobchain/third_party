@@ -15,11 +15,9 @@ require (
 	github.com/matttproud/golang_protobuf_extensions v1.0.1
 	github.com/miekg/pkcs11 v1.1.1
 	github.com/onsi/gomega v1.20.0
-	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_model v0.2.0
 	github.com/spf13/viper v1.8.1
-	github.com/sykesm/zap-logfmt v0.0.4
 	github.com/wsw365904/newcryptosm v0.0.0-20220821120244-1d3c5ba2f14a
 	github.com/wsw365904/wswlog v0.0.0-20220708094655-a4c554b01c1b
 	go.uber.org/zap v1.22.0
@@ -27,6 +25,5 @@ require (
 	golang.org/x/net v0.0.0-20220812174116-3211cb980234
 	golang.org/x/tools v0.1.12
 	google.golang.org/appengine v1.6.7
-	google.golang.org/grpc v1.48.0
 	gopkg.in/asn1-ber.v1 v1.0.0-20181015200546-f715ec2f112d
 )

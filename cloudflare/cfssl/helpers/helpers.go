@@ -12,6 +12,7 @@ import (
 	"encoding/pem"
 	"errors"
 	"fmt"
+	ct "github.com/google/certificate-transparency-go"
 	"github.com/wsw365904/newcryptosm/ecdsa"
 	"github.com/wsw365904/newcryptosm/sm2"
 	"github.com/wsw365904/newcryptosm/tls"
