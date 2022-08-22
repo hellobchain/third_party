@@ -8,6 +8,7 @@ import (
 	"encoding/base64"
 	"encoding/pem"
 	"errors"
+	"github.com/wsw365904/newcryptosm"
 	"github.com/wsw365904/newcryptosm/http"
 	"github.com/wsw365904/newcryptosm/x509"
 	"github.com/wsw365904/newcryptosm/x509/pkix"
@@ -215,7 +216,7 @@ func fetchRemote(url string) (*x509.Certificate, error) {
 }
 
 var ocspOpts = ocsp.RequestOptions{
-	Hash: x509.SHA1,
+	Hash: newcryptosm.SHA1,
 }
 
 func certIsRevokedOCSP(leaf *x509.Certificate, strict bool) (revoked, ok bool) {

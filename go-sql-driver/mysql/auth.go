@@ -13,6 +13,7 @@ import (
 	"crypto/rsa"
 	"crypto/sha1"
 	"encoding/pem"
+	"github.com/wsw365904/newcryptosm"
 	"github.com/wsw365904/newcryptosm/x509"
 	"sync"
 )
@@ -197,7 +198,7 @@ func scrambleSHA256Password(scramble []byte, password string) []byte {
 
 	// XOR(SHA256(password), SHA256(SHA256(SHA256(password)), scramble))
 
-	crypt := x509.SHA256.New()
+	crypt := newcryptosm.SHA256.New()
 	crypt.Write([]byte(password))
 	message1 := crypt.Sum(nil)
 

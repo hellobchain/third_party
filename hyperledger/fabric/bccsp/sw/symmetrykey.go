@@ -17,8 +17,7 @@ package sw
 
 import (
 	"errors"
-	"github.com/wsw365904/newcryptosm/x509"
-
+	"github.com/wsw365904/newcryptosm"
 	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
 )
 
@@ -39,7 +38,7 @@ func (k *symmetryPrivateKey) Bytes() (raw []byte, err error) {
 
 // SKI returns the subject key identifier of this key.
 func (k *symmetryPrivateKey) SKI() (ski []byte) {
-	hash := x509.SHA256.New()
+	hash := newcryptosm.SHA256.New()
 	hash.Write([]byte{0x01})
 	hash.Write(k.privKey)
 	return hash.Sum(nil)

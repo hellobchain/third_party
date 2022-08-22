@@ -1,26 +1,26 @@
 package algo
 
 import (
-	"github.com/spf13/viper"
 	"github.com/wsw365904/newcryptosm"
 	"github.com/wsw365904/wswlog/wlogging"
 )
+
+var sm2AlgoFlag bool
 
 var logger = wlogging.MustGetLoggerWithoutName()
 
 func SetGMFlag() {
 	logger.Info("SetGMFlag")
-	viper.Set("GMFlag", true)
+	sm2AlgoFlag = true
 }
 
 func GetGMFlag() bool {
-	algoFlag := viper.GetBool("GMFlag")
-	logger.Info("GetGMFlag:", algoFlag)
-	return algoFlag
+	logger.Info("GetGMFlag:", sm2AlgoFlag)
+	return sm2AlgoFlag
 }
 
 func GetDefaultHash() newcryptosm.Hash {
-	if GetGMFlag() {
+	if sm2AlgoFlag {
 		return newcryptosm.SM3
 	} else {
 		return newcryptosm.SHA256
@@ -28,7 +28,7 @@ func GetDefaultHash() newcryptosm.Hash {
 }
 
 func GetAlgo() string {
-	if GetGMFlag() {
+	if sm2AlgoFlag {
 		return "sm2"
 	} else {
 		return "ecdsa"

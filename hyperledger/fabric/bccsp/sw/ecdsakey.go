@@ -19,9 +19,10 @@ import (
 	"crypto/elliptic"
 	"errors"
 	"fmt"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
+	"github.com/wsw365904/newcryptosm"
 	"github.com/wsw365904/newcryptosm/ecdsa"
 	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
 )
 
 type ecdsaPrivateKey struct {
@@ -44,9 +45,9 @@ func (k *ecdsaPrivateKey) SKI() []byte {
 	raw := elliptic.Marshal(k.privKey.Curve, k.privKey.PublicKey.X, k.privKey.PublicKey.Y)
 
 	// Hash it
-	hash := x509.SHA256.New()
+	hash := newcryptosm.SHA256.New()
 	if ecdsa.IsSM2(k.privKey.Params()) {
-		hash = x509.SM3.New()
+		hash = newcryptosm.SM3.New()
 	}
 	hash.Write(raw)
 	return hash.Sum(nil)
@@ -94,9 +95,9 @@ func (k *ecdsaPublicKey) SKI() []byte {
 	raw := elliptic.Marshal(k.pubKey.Curve, k.pubKey.X, k.pubKey.Y)
 
 	// Hash it
-	hash := x509.SHA256.New()
+	hash := newcryptosm.SHA256.New()
 	if ecdsa.IsSM2(k.pubKey.Params()) {
-		hash = x509.SM3.New()
+		hash = newcryptosm.SM3.New()
 	}
 	hash.Write(raw)
 	return hash.Sum(nil)
