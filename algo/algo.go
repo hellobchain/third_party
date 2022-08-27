@@ -10,12 +10,12 @@ var sm2AlgoFlag bool
 var logger = wlogging.MustGetLoggerWithoutName()
 
 func SetGMFlag() {
-	logger.Info("SetGMFlag")
+	logger.Debug("SetGMFlag")
 	sm2AlgoFlag = true
 }
 
 func GetGMFlag() bool {
-	logger.Info("GetGMFlag:", sm2AlgoFlag)
+	logger.Debug("GetGMFlag:", sm2AlgoFlag)
 	return sm2AlgoFlag
 }
 
