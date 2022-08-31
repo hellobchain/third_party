@@ -13,9 +13,10 @@ import (
 )
 
 const (
-	Name  = "name"
-	MspID = "mspid"
-	Role  = "role"
+	Name   = "name"
+	MspID  = "mspid"
+	MspID2 = "mspId"
+	Role   = "role"
 
 	SBy = "signed-by"
 )
@@ -25,9 +26,9 @@ type mspInfo struct {
 	mspNum       int32
 }
 
-func parseIdentities(identities map[string]interface{}) (map[string]*mspInfo, []*mb.MSPPrincipal, error) {
+func parseIdentitiesForJava(identities map[string]interface{}) (map[string]*mspInfo, []*mb.MSPPrincipal, error) {
 	ret := make(map[string]*mspInfo)
-	mspPribcipals := make([]*mb.MSPPrincipal, len(identities))
+	mspPrincipals := make([]*mb.MSPPrincipal, len(identities))
 	var num int32
 	for k, v := range identities {
 		if ret[k] != nil {
@@ -97,7 +98,7 @@ func parseIdentities(identities map[string]interface{}) (map[string]*mspInfo, []
 			},
 			mspNum: num,
 		}
-		mspPribcipals[num] = p.mspPrincipal
+		mspPrincipals[num] = p.mspPrincipal
 		num++
 		ret[k] = p
 	}
@@ -105,10 +106,10 @@ func parseIdentities(identities map[string]interface{}) (map[string]*mspInfo, []
 	if len(ret) == 0 {
 		return nil, nil, errors.New("No identities were found in the policy specification")
 	}
-	return ret, mspPribcipals, nil
+	return ret, mspPrincipals, nil
 }
 
-func parsePolicy(identitiesMap map[string]*mspInfo, policy map[string]interface{}) (*cb.SignaturePolicy, error) {
+func parsePolicyForJava(identitiesMap map[string]*mspInfo, policy map[string]interface{}) (*cb.SignaturePolicy, error) {
 	if policy == nil {
 		return nil, errors.New("No policy section was found in the document")
 	}
@@ -149,7 +150,7 @@ func parsePolicy(identitiesMap map[string]*mspInfo, policy map[string]interface{
 						if err != nil {
 							return nil, err
 						}
-						signaturePolicy, err := parsePolicy(identitiesMap, toMapString)
+						signaturePolicy, err := parsePolicyForJava(identitiesMap, toMapString)
 						if err != nil {
 							return nil, err
 						}
@@ -188,12 +189,12 @@ func PolicyParseJava(yamlString string) (*cb.SignaturePolicyEnvelope, error) {
 	if err != nil {
 		return nil, err
 	}
-	identities, mspPrincipals, err := parseIdentities(newViper.GetStringMap("identities"))
+	identities, mspPrincipals, err := parseIdentitiesForJava(newViper.GetStringMap("identities"))
 	if err != nil {
 		return nil, err
 	}
 
-	rule, err := parsePolicy(identities, newViper.GetStringMap("policy"))
+	rule, err := parsePolicyForJava(identities, newViper.GetStringMap("policy"))
 	if err != nil {
 		return nil, err
 	}

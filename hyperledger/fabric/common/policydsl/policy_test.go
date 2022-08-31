@@ -19,7 +19,7 @@ func TestPolicyByJavaYaml(t *testing.T) {
 		return
 	}
 	t.Log("policy", newViper.GetStringMap("policy"), "\nidentities", newViper.GetStringMap("identities"))
-	identities, _, err := parseIdentities(newViper.GetStringMap("identities"))
+	identities, _, err := parseIdentitiesForJava(newViper.GetStringMap("identities"))
 	if err != nil {
 		t.Error(err)
 		return
@@ -27,7 +27,7 @@ func TestPolicyByJavaYaml(t *testing.T) {
 
 	t.Log("identities:", identities)
 
-	signaturePolicy, err := parsePolicy(identities, newViper.GetStringMap("policy"))
+	signaturePolicy, err := parsePolicyForJava(identities, newViper.GetStringMap("policy"))
 	if err != nil {
 		t.Error(err)
 		return
@@ -50,7 +50,7 @@ func TestPolicyByJava(t *testing.T) {
 	}
 	t.Log(*newViper)
 	t.Log("policy", newViper.GetStringMap("policy"), "\nidentities", newViper.GetStringMap("identities"))
-	identities, _, err := parseIdentities(newViper.GetStringMap("identities"))
+	identities, _, err := parseIdentitiesForJava(newViper.GetStringMap("identities"))
 	if err != nil {
 		t.Error(err)
 		return
@@ -58,7 +58,7 @@ func TestPolicyByJava(t *testing.T) {
 
 	t.Log("identities:", identities)
 
-	signaturePolicy, err := parsePolicy(identities, newViper.GetStringMap("policy"))
+	signaturePolicy, err := parsePolicyForJava(identities, newViper.GetStringMap("policy"))
 	if err != nil {
 		t.Error(err)
 		return
@@ -89,4 +89,27 @@ func TestPolicyByGo(t *testing.T) {
 		return
 	}
 	t.Log("endorser policy:", policyEnvelope)
+}
+
+const endorserPolicyNode = `{"identities":[{"role":{"name":"member","mspId":"peerOrg1"}}],"policy":{"2-of":[{"signed-by":0},{"1-of":[{"signed-by":0},{"signed-by":0}]}]}}`
+
+func TestPolicyByNode(t *testing.T) {
+	newViper := viper.New()
+	newViper.SetConfigType("yaml")
+	blockReader := bytes.NewBufferString(endorserPolicyNode)
+	defer blockReader.Reset()
+	err := newViper.ReadConfig(blockReader)
+	if err != nil {
+		t.Error("ReadConfig", err)
+		return
+	}
+	t.Log(newViper.Get("identities"))
+	t.Log(newViper.GetStringMap("policy"))
+
+	policyParseNode, err := PolicyParseNode(endorserPolicyNode)
+	if err != nil {
+		t.Error(err)
+		return
+	}
+	t.Log("endorser policy:", policyParseNode)
 }
