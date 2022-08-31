@@ -26,6 +26,7 @@ func bidirectionalMarshal(t *testing.T, doc proto.Message) {
 
 	err := protolator.DeepMarshalJSON(&buffer, doc)
 	gt.Expect(err).NotTo(HaveOccurred())
+	t.Log("ret1", buffer.String())
 
 	newRoot := proto.Clone(doc)
 	newRoot.Reset()

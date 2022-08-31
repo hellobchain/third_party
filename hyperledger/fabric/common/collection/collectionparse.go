@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"github.com/golang/protobuf/proto"
 	pb "github.com/hyperledger/fabric-protos-go/peer"
-	"github.com/wsw365904/third_party/hyperledger/fabric/common/policydsl"
 	"github.com/pkg/errors"
+	"github.com/wsw365904/third_party/hyperledger/fabric/common/policydsl"
 )
 
 type endorsementPolicy struct {
@@ -36,6 +36,72 @@ func GetCollectionConfigFromBytes(cconfBytes []byte) (*pb.CollectionConfigPackag
 	ccarray := make([]*pb.CollectionConfig, 0, len(*cconf))
 	for _, cconfitem := range *cconf {
 		p, err := policydsl.FromString(cconfitem.Policy)
+		if err != nil {
+			return nil, nil, errors.WithMessagef(err, "invalid policy %s", cconfitem.Policy)
+		}
+
+		cpc := &pb.CollectionPolicyConfig{
+			Payload: &pb.CollectionPolicyConfig_SignaturePolicy{
+				SignaturePolicy: p,
+			},
+		}
+
+		var ep *pb.ApplicationPolicy
+		if cconfitem.EndorsementPolicy != nil {
+			signaturePolicy := cconfitem.EndorsementPolicy.SignaturePolicy
+			channelConfigPolicy := cconfitem.EndorsementPolicy.ChannelConfigPolicy
+			ep, err = getApplicationPolicy(signaturePolicy, channelConfigPolicy)
+			if err != nil {
+				return nil, nil, errors.WithMessagef(err, "invalid endorsement policy [%#v]", cconfitem.EndorsementPolicy)
+			}
+		}
+
+		// Set default requiredPeerCount and MaxPeerCount if not specified in json
+		requiredPeerCount := int32(0)
+		maxPeerCount := int32(1)
+		if cconfitem.RequiredPeerCount != nil {
+			requiredPeerCount = *cconfitem.RequiredPeerCount
+		}
+		if cconfitem.MaxPeerCount != nil {
+			maxPeerCount = *cconfitem.MaxPeerCount
+		}
+
+		cc := &pb.CollectionConfig{
+			Payload: &pb.CollectionConfig_StaticCollectionConfig{
+				StaticCollectionConfig: &pb.StaticCollectionConfig{
+					Name:              cconfitem.Name,
+					MemberOrgsPolicy:  cpc,
+					RequiredPeerCount: requiredPeerCount,
+					MaximumPeerCount:  maxPeerCount,
+					BlockToLive:       cconfitem.BlockToLive,
+					MemberOnlyRead:    cconfitem.MemberOnlyRead,
+					MemberOnlyWrite:   cconfitem.MemberOnlyWrite,
+					EndorsementPolicy: ep,
+				},
+			},
+		}
+
+		ccarray = append(ccarray, cc)
+	}
+
+	ccp := &pb.CollectionConfigPackage{Config: ccarray}
+	ccpBytes, err := proto.Marshal(ccp)
+	return ccp, ccpBytes, err
+}
+
+// GetCollectionConfigFromBytes getCollectionConfig retrieves the collection configuration
+// from the supplied byte array; the byte array must contain a
+// json-formatted array of collectionConfigJson elements
+func GetCollectionConfigFromBytesForJava(cconfBytes []byte) (*pb.CollectionConfigPackage, []byte, error) {
+	cconf := &[]collectionConfigJson{}
+	err := json.Unmarshal(cconfBytes, cconf)
+	if err != nil {
+		return nil, nil, errors.Wrap(err, "could not parse the collection configuration")
+	}
+
+	ccarray := make([]*pb.CollectionConfig, 0, len(*cconf))
+	for _, cconfitem := range *cconf {
+		p, err := policydsl.PolicyParseJava(cconfitem.Policy)
 		if err != nil {
 			return nil, nil, errors.WithMessagef(err, "invalid policy %s", cconfitem.Policy)
 		}
