@@ -155,7 +155,15 @@ func PolicyParseNode(yamlString string) (*cb.SignaturePolicyEnvelope, error) {
 	if err != nil {
 		return nil, err
 	}
-	mspPrincipals, err := parseIdentitiesForNode(newViper.Get("identities").([]interface{}))
+	identitiesValue := newViper.Get("identities")
+	if identitiesValue == nil {
+		return nil, errors.New("no find identities")
+	}
+	identities, ok := identitiesValue.([]interface{})
+	if !ok {
+		return nil, errors.New("find identities but identities is not []interface{}")
+	}
+	mspPrincipals, err := parseIdentitiesForNode(identities)
 	if err != nil {
 		return nil, err
 	}

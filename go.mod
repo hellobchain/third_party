@@ -18,8 +18,8 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_model v0.2.0
 	github.com/spf13/viper v1.8.1
-	github.com/wsw365904/newcryptosm v0.0.0-20220821120244-1d3c5ba2f14a
-	github.com/wsw365904/wswlog v0.0.0-20220708094655-a4c554b01c1b
+	github.com/wsw365904/newcryptosm v0.0.0-20220903144440-10a6eb007dbe
+	github.com/wsw365904/wswlog v0.0.0-20220826082513-787d040d761f
 	go.uber.org/zap v1.22.0
 	golang.org/x/crypto v0.0.0-20220817201139-bc19a97f63c8
 	golang.org/x/net v0.0.0-20220812174116-3211cb980234
