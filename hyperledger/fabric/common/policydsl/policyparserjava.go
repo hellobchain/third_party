@@ -8,6 +8,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 	"regexp"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -26,15 +27,70 @@ type mspInfo struct {
 	mspNum       int32
 }
 
+type stringArray []string
+
+func (l stringArray) Len() int {
+	return len(l)
+}
+
+func (l stringArray) Less(i, j int) bool {
+	switch {
+	case l[i] > l[j]:
+		return false
+	case l[i] < l[j]:
+		return true
+	default:
+		return false
+	}
+}
+
+func (l stringArray) Swap(i, j int) {
+	l[i], l[j] = l[j], l[i]
+}
+
+func sortMapKeys(sortedMap map[string]interface{}) []string {
+	sortKeys := make(stringArray, len(sortedMap))
+	var keyIndex int
+	for k, _ := range sortedMap {
+		sortKeys[keyIndex] = k
+		keyIndex++
+	}
+	sort.Sort(sortKeys)
+	return sortKeys
+}
+
+func sortMapArray(sortedMapArray []interface{}) ([]interface{}, error) {
+	sortKeys := make(stringArray, len(sortedMapArray))
+	newMap := make(map[string]interface{})
+	for i, sortedMap := range sortedMapArray {
+		nlo, ok := sortedMap.(map[interface{}]interface{})
+		if !ok {
+			return nil, errors.Errorf("expect map[interface]interface got %v", sortedMap)
+		}
+		toMapString, err := mapInterfaceToMapString(nlo)
+		if err != nil {
+			return nil, err
+		}
+		sortKeys[i] = toMapString[SBy].(string)
+		newMap[sortKeys[i]] = sortedMap
+	}
+	sort.Sort(sortKeys)
+	ret := make([]interface{}, sortKeys.Len())
+	for i, key := range sortKeys {
+		ret[i] = newMap[key]
+	}
+	return ret, nil
+}
+
 func parseIdentitiesForJava(identities map[string]interface{}) (map[string]*mspInfo, []*mb.MSPPrincipal, error) {
+	sortIdentitiesMapKeys := sortMapKeys(identities)
 	ret := make(map[string]*mspInfo)
 	mspPrincipals := make([]*mb.MSPPrincipal, len(identities))
-	var num int32
-	for k, v := range identities {
+	for i, k := range sortIdentitiesMapKeys {
 		if ret[k] != nil {
 			return nil, nil, errors.Errorf("In identities with key %v is listed more than once", k)
 		}
-
+		v := identities[k]
 		vMap, ok := v.(map[string]interface{})
 		if !ok {
 			return nil, nil, errors.Errorf("In identities with key %v value expected map got %v", k, v)
@@ -96,10 +152,9 @@ func parseIdentitiesForJava(identities map[string]interface{}) (map[string]*mspI
 				PrincipalClassification: mb.MSPPrincipal_ROLE,
 				Principal:               mspRole,
 			},
-			mspNum: num,
+			mspNum: int32(i),
 		}
-		mspPrincipals[num] = p.mspPrincipal
-		num++
+		mspPrincipals[i] = p.mspPrincipal
 		ret[k] = p
 	}
 
@@ -136,12 +191,16 @@ func parsePolicyForJava(identitiesMap map[string]*mspInfo, policy map[string]int
 					if !ok {
 						return nil, errors.Errorf("%v expected to have array but found %v", k, v)
 					}
-					strLen := len(vStringLists)
+					mapArray, err := sortMapArray(vStringLists)
+					if err != nil {
+						return nil, err
+					}
+					strLen := len(mapArray)
 					if strLen < matchNo {
 						return nil, errors.Errorf("%v expected to have at least %v items to match but only found %v", k, matchNo, strLen)
 					}
 					sps := make([]*cb.SignaturePolicy, strLen)
-					for i, vStringList := range vStringLists {
+					for i, vStringList := range mapArray {
 						nlo, ok := vStringList.(map[interface{}]interface{})
 						if !ok {
 							return nil, errors.Errorf("expect map[interface]interface got %v", vStringList)
