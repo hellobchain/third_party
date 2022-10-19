@@ -11,7 +11,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/wsw365904/newcryptosm/ecdsa"
+	"github.com/hellobchain/newcryptosm/ecdsa"
 	"io"
 	"io/ioutil"
 	"os"
@@ -19,7 +19,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 )
 
 // NewFileBasedKeyStore instantiated a file-based key store at a given position.

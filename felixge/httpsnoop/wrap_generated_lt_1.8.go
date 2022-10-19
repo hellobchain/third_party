@@ -7,7 +7,7 @@ package httpsnoop
 
 import (
 	"bufio"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"io"
 	"net"
 )

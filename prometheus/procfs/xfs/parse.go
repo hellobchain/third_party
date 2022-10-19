@@ -19,7 +19,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/wsw365904/third_party/prometheus/procfs/internal/util"
+	"github.com/hellobchain/third_party/prometheus/procfs/internal/util"
 )
 
 // ParseStats parses a Stats from an input io.Reader, using the format

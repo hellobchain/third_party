@@ -7,7 +7,7 @@ package ldap
 import (
 	"errors"
 	"fmt"
-	"github.com/wsw365904/newcryptosm/tls"
+	"github.com/hellobchain/newcryptosm/tls"
 	ber "gopkg.in/asn1-ber.v1"
 	"log"
 	"net"

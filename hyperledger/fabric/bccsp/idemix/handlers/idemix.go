@@ -6,9 +6,9 @@ SPDX-License-Identifier: Apache-2.0
 package handlers
 
 import (
-	"github.com/wsw365904/newcryptosm/ecdsa"
+	"github.com/hellobchain/newcryptosm/ecdsa"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 )
 
 // IssuerPublicKey is the issuer public key

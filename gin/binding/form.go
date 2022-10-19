@@ -5,7 +5,7 @@
 package binding
 
 import (
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 )
 
 const defaultMemory = 32 << 20

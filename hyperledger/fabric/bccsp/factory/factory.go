@@ -16,11 +16,11 @@ limitations under the License.
 package factory
 
 import (
-	"github.com/wsw365904/wswlog/wlogging"
+	"github.com/hellobchain/wswlog/wlogging"
 	"sync"
 
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 )
 
 var (

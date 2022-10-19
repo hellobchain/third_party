@@ -5,10 +5,10 @@ package derhelpers
 import (
 	"crypto"
 	"crypto/rsa"
-	"github.com/wsw365904/newcryptosm/ecdsa"
-	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/ecdsa"
+	"github.com/hellobchain/newcryptosm/x509"
 
-	cferr "github.com/wsw365904/third_party/cloudflare/cfssl/errors"
+	cferr "github.com/hellobchain/third_party/cloudflare/cfssl/errors"
 )
 
 // ParsePrivateKeyDER parses a PKCS #1, PKCS #8, or elliptic curve

@@ -9,7 +9,7 @@ package configtx
 import (
 	"errors"
 	"fmt"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/configtx/internal/policydsl"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/configtx/internal/policydsl"
 	"strconv"
 	"strings"
 

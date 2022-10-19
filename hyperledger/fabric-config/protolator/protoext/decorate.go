@@ -8,16 +8,16 @@ package protoext
 
 import (
 	"github.com/golang/protobuf/proto"
+	commonext2 "github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/commonext"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/ledger/rwsetext"
+	mspext2 "github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/mspext"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/ordererext"
+	peerext2 "github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/peerext"
 	"github.com/hyperledger/fabric-protos-go/common"
 	"github.com/hyperledger/fabric-protos-go/ledger/rwset"
 	"github.com/hyperledger/fabric-protos-go/msp"
 	"github.com/hyperledger/fabric-protos-go/orderer"
 	"github.com/hyperledger/fabric-protos-go/peer"
-	commonext2 "github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/commonext"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/ledger/rwsetext"
-	mspext2 "github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/mspext"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/ordererext"
-	peerext2 "github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/peerext"
 )
 
 // Docorate will add additional capabilities to some protobuf messages that

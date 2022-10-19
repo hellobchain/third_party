@@ -5,8 +5,8 @@
 package gin
 
 import (
-	"github.com/wsw365904/newcryptosm/http"
-	"github.com/wsw365904/newcryptosm/http/httptest"
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http/httptest"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

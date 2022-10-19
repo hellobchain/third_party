@@ -22,7 +22,7 @@ under the License.
 package FP256BN
 
 import "time"
-import "github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
+import "github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
 
 const MFS int = int(MODBYTES)
 const MGS int = int(MODBYTES)

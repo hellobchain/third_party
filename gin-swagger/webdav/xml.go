@@ -11,7 +11,7 @@ import (
 	"bytes"
 	"encoding/xml"
 	"fmt"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"io"
 	"time"
 
@@ -32,7 +32,7 @@ import (
 	// In the long term, this package should use the standard library's version
 	// only, and the internal fork deleted, once
 	// https://github.com/golang/go/issues/13400 is resolved.
-	ixml "github.com/wsw365904/third_party/gin-swagger/webdav/internal/xml"
+	ixml "github.com/hellobchain/third_party/gin-swagger/webdav/internal/xml"
 )
 
 // http://www.webdav.org/specs/rfc4918.html#ELEMENT_lockinfo

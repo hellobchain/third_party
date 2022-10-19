@@ -11,7 +11,7 @@ import (
 	"io"
 	"io/ioutil"
 	"mime/multipart"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"os"
 	"reflect"
 	"strconv"
@@ -21,7 +21,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"
-	"github.com/wsw365904/third_party/gin/testdata/protoexample"
+	"github.com/hellobchain/third_party/gin/testdata/protoexample"
 )
 
 type appkey struct {

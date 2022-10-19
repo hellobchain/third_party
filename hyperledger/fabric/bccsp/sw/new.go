@@ -10,11 +10,11 @@ import (
 	"crypto/elliptic"
 	"crypto/sha256"
 	"crypto/sha512"
-	"github.com/wsw365904/newcryptosm/sm2"
-	"github.com/wsw365904/newcryptosm/sm3"
+	"github.com/hellobchain/newcryptosm/sm2"
+	"github.com/hellobchain/newcryptosm/sm3"
 	"reflect"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/sha3"
 )

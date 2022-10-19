@@ -10,18 +10,18 @@ package ocsp
 import (
 	"bytes"
 	"crypto"
-	"github.com/wsw365904/newcryptosm"
-	"github.com/wsw365904/newcryptosm/x509"
-	"github.com/wsw365904/newcryptosm/x509/pkix"
+	"github.com/hellobchain/newcryptosm"
+	"github.com/hellobchain/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/x509/pkix"
 	"io/ioutil"
 	"strconv"
 	"strings"
 	"time"
 
-	cferr "github.com/wsw365904/third_party/cloudflare/cfssl/errors"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/helpers"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/log"
-	"github.com/wsw365904/third_party/ocsp"
+	cferr "github.com/hellobchain/third_party/cloudflare/cfssl/errors"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/helpers"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/log"
+	"github.com/hellobchain/third_party/ocsp"
 )
 
 // revocationReasonCodes is a map between string reason codes

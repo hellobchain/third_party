@@ -2,13 +2,13 @@ package client
 
 import (
 	"errors"
-	"github.com/wsw365904/newcryptosm/http"
-	"github.com/wsw365904/newcryptosm/tls"
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/tls"
 	"strings"
 	"time"
 
-	"github.com/wsw365904/third_party/cloudflare/cfssl/auth"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/info"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/auth"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/info"
 )
 
 // Strategy is the means by which the server to use as a remote should

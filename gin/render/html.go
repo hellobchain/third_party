@@ -6,7 +6,7 @@ package render
 
 import (
 	"html/template"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 )
 
 // Delims represents a set of Left and Right delimiters for HTML template rendering.

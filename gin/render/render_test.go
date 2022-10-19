@@ -7,9 +7,9 @@ package render
 import (
 	"encoding/xml"
 	"errors"
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http/httptest"
 	"html/template"
-	"github.com/wsw365904/newcryptosm/http"
-	"github.com/wsw365904/newcryptosm/http/httptest"
 	"strconv"
 	"strings"
 	"testing"
@@ -17,7 +17,7 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"
 
-	testdata "github.com/wsw365904/third_party/gin/testdata/protoexample"
+	testdata "github.com/hellobchain/third_party/gin/testdata/protoexample"
 )
 
 // TODO unit tests

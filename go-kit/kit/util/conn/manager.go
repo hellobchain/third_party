@@ -6,7 +6,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/wsw365904/third_party/go-kit/kit/log"
+	"github.com/hellobchain/third_party/go-kit/kit/log"
 )
 
 // Dialer imitates net.Dial. Dialer is assumed to yield connections that are

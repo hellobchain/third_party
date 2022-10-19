@@ -6,7 +6,7 @@ package ginS
 
 import (
 	"html/template"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"sync"
 )
 

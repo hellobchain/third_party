@@ -6,8 +6,8 @@ SPDX-License-Identifier: Apache-2.0
 package bridge
 
 import (
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
-	cryptolib "github.com/wsw365904/third_party/hyperledger/fabric/idemix"
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
+	cryptolib "github.com/hellobchain/third_party/hyperledger/fabric/idemix"
 )
 
 // NewRandOrPanic return a new amcl PRG or panic

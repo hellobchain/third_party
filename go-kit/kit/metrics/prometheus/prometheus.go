@@ -5,10 +5,10 @@
 package prometheus
 
 import (
-	"github.com/wsw365904/third_party/prometheus/client_golang/prometheus"
+	"github.com/hellobchain/third_party/prometheus/client_golang/prometheus"
 
-	"github.com/wsw365904/third_party/go-kit/kit/metrics"
-	"github.com/wsw365904/third_party/go-kit/kit/metrics/internal/lv"
+	"github.com/hellobchain/third_party/go-kit/kit/metrics"
+	"github.com/hellobchain/third_party/go-kit/kit/metrics/internal/lv"
 )
 
 // Counter implements Counter, via a Prometheus CounterVec.

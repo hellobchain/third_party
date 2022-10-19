@@ -19,7 +19,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/wsw365904/third_party/prometheus/common/model"
+	"github.com/hellobchain/third_party/prometheus/common/model"
 )
 
 // Labels represents a collection of label name -> value mappings. This type is

@@ -7,11 +7,11 @@ SPDX-License-Identifier: Apache-2.0
 package protoext
 
 import (
-	commonext2 "github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/commonext"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/ledger/rwsetext"
-	mspext2 "github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/mspext"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/ordererext"
-	peerext2 "github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/peerext"
+	commonext2 "github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/commonext"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/ledger/rwsetext"
+	mspext2 "github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/mspext"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/ordererext"
+	peerext2 "github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/peerext"
 	"testing"
 
 	"github.com/golang/protobuf/proto"

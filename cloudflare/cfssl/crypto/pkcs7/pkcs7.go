@@ -49,10 +49,10 @@ package pkcs7
 import (
 	"encoding/asn1"
 	"errors"
-	"github.com/wsw365904/newcryptosm/x509"
-	"github.com/wsw365904/newcryptosm/x509/pkix"
+	"github.com/hellobchain/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/x509/pkix"
 
-	cferr "github.com/wsw365904/third_party/cloudflare/cfssl/errors"
+	cferr "github.com/hellobchain/third_party/cloudflare/cfssl/errors"
 )
 
 // Types used for asn1 Unmarshaling.

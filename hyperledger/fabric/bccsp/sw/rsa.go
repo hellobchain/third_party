@@ -11,9 +11,9 @@ import (
 	"crypto/sha256"
 	"errors"
 	"fmt"
-	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/x509"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 )
 
 // An rsaPublicKey wraps the standard library implementation of an RSA public

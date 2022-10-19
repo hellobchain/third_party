@@ -1,9 +1,9 @@
 package errors
 
 import (
-	"github.com/wsw365904/newcryptosm/x509"
 	"encoding/json"
 	"fmt"
+	"github.com/hellobchain/newcryptosm/x509"
 )
 
 // Error is the error type usually returned by functions in CF SSL package.

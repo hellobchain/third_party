@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package policydsl_test
 
 import (
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/configtx/internal/policydsl"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/configtx/internal/policydsl"
 	"testing"
 
 	"github.com/golang/protobuf/proto"

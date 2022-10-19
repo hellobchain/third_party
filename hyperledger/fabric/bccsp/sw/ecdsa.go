@@ -18,10 +18,10 @@ package sw
 import (
 	"crypto/rand"
 	"fmt"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp/utils"
-	"github.com/wsw365904/newcryptosm/ecdsa"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp/utils"
+	"github.com/hellobchain/newcryptosm/ecdsa"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 )
 
 func signECDSA(k *ecdsa.PrivateKey, digest []byte, opts bccsp.SignerOpts) ([]byte, error) {

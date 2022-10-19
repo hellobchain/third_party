@@ -3,9 +3,9 @@ package collection
 import (
 	"encoding/json"
 	"github.com/golang/protobuf/proto"
+	"github.com/hellobchain/third_party/hyperledger/fabric/common/policydsl"
 	pb "github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric/common/policydsl"
 )
 
 type endorsementPolicy struct {

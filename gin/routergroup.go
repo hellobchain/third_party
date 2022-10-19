@@ -5,7 +5,7 @@
 package gin
 
 import (
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"path"
 	"regexp"
 	"strings"

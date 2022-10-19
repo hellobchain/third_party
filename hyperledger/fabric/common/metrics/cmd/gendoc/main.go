@@ -13,7 +13,7 @@ import (
 	"os"
 	"text/template"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/common/metrics/gendoc"
+	"github.com/hellobchain/third_party/hyperledger/fabric/common/metrics/gendoc"
 	"golang.org/x/tools/go/packages"
 )
 
@@ -32,7 +32,7 @@ func main() {
 
 	patterns := flag.Args()
 	if len(patterns) == 0 {
-		patterns = []string{"github.com/wsw365904/third_party/hyperledger/fabric/..."}
+		patterns = []string{"github.com/hellobchain/third_party/hyperledger/fabric/..."}
 	}
 
 	pkgs, err := packages.Load(&packages.Config{Mode: packages.LoadSyntax}, patterns...)

@@ -8,8 +8,8 @@ import (
 	"errors"
 	"testing"
 
+	"github.com/hellobchain/third_party/gin/internal/json"
 	"github.com/stretchr/testify/assert"
-	"github.com/wsw365904/third_party/gin/internal/json"
 )
 
 func TestError(t *testing.T) {

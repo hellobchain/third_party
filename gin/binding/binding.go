@@ -7,7 +7,7 @@
 
 package binding
 
-import "github.com/wsw365904/newcryptosm/http"
+import "github.com/hellobchain/newcryptosm/http"
 
 // Content-Type MIME of the most common data formats.
 const (

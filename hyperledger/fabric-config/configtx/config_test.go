@@ -10,8 +10,8 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/wsw365904/newcryptosm/ecdsa"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator"
+	"github.com/hellobchain/newcryptosm/ecdsa"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator"
 	"testing"
 
 	"github.com/golang/protobuf/proto"

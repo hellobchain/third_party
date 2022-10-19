@@ -8,20 +8,20 @@ import (
 	"encoding/base64"
 	"encoding/pem"
 	"errors"
-	"github.com/wsw365904/newcryptosm"
-	"github.com/wsw365904/newcryptosm/http"
-	"github.com/wsw365904/newcryptosm/x509"
-	"github.com/wsw365904/newcryptosm/x509/pkix"
+	"github.com/hellobchain/newcryptosm"
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/x509/pkix"
 	"io"
 	"io/ioutil"
 	neturl "net/url"
 	"sync"
 	"time"
 
-	"github.com/wsw365904/third_party/ocsp"
+	"github.com/hellobchain/third_party/ocsp"
 
-	"github.com/wsw365904/third_party/cloudflare/cfssl/helpers"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/log"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/helpers"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/log"
 )
 
 // HardFail determines whether the failure to check the revocation

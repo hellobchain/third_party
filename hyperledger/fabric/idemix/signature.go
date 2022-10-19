@@ -7,13 +7,13 @@ SPDX-License-Identifier: Apache-2.0
 package idemix
 
 import (
-	"github.com/wsw365904/newcryptosm/ecdsa"
-	"github.com/wsw365904/wswlog/wlogging"
+	"github.com/hellobchain/newcryptosm/ecdsa"
+	"github.com/hellobchain/wswlog/wlogging"
 	"sort"
 
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
 )
 
 var idemixLogger = wlogging.MustGetLoggerWithoutName()

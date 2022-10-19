@@ -4,7 +4,7 @@
 
 package render
 
-import "github.com/wsw365904/newcryptosm/http"
+import "github.com/hellobchain/newcryptosm/http"
 
 // Data contains ContentType and bytes data.
 type Data struct {

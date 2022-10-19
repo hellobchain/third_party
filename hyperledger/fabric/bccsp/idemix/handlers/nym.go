@@ -6,10 +6,10 @@ SPDX-License-Identifier: Apache-2.0
 package handlers
 
 import (
-	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/x509"
 
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
 )
 
 // nymSecretKey contains the nym secret key

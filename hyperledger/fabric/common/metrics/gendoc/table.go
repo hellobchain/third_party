@@ -12,8 +12,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/common/metrics"
-	"github.com/wsw365904/third_party/hyperledger/fabric/common/metrics/internal/namer"
+	"github.com/hellobchain/third_party/hyperledger/fabric/common/metrics"
+	"github.com/hellobchain/third_party/hyperledger/fabric/common/metrics/internal/namer"
 )
 
 // A Field represents data that is included in the reference table for metrics.

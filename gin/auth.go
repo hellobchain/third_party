@@ -7,10 +7,10 @@ package gin
 import (
 	"crypto/subtle"
 	"encoding/base64"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"strconv"
 
-	"github.com/wsw365904/third_party/gin/internal/bytesconv"
+	"github.com/hellobchain/third_party/gin/internal/bytesconv"
 )
 
 // AuthUserKey is the cookie name for user credential in basic auth.

@@ -9,7 +9,7 @@ package render
 
 import (
 	"bytes"
-	"github.com/wsw365904/newcryptosm/http/httptest"
+	"github.com/hellobchain/newcryptosm/http/httptest"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

@@ -17,7 +17,7 @@ limitations under the License.
 package utils
 
 import (
-	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/x509"
 )
 
 // DERToX509Certificate converts der to x509

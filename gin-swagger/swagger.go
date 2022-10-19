@@ -1,17 +1,17 @@
 package ginSwagger
 
 import (
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"html/template"
 	"os"
 	"path/filepath"
 	"regexp"
 	"sync"
 
-	"github.com/wsw365904/third_party/gin-swagger/webdav"
+	"github.com/hellobchain/third_party/gin-swagger/webdav"
 
+	"github.com/hellobchain/third_party/gin"
 	"github.com/swaggo/swag"
-	"github.com/wsw365904/third_party/gin"
 )
 
 type swaggerConfig struct {

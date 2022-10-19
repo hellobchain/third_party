@@ -20,9 +20,9 @@ import (
 	"crypto/elliptic"
 	"crypto/rand"
 	"fmt"
-	"github.com/wsw365904/newcryptosm/ecdsa"
+	"github.com/hellobchain/newcryptosm/ecdsa"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 )
 
 type ecdsaKeyGenerator struct {

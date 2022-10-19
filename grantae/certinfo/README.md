@@ -48,7 +48,7 @@ func main() {
 package main
 
 import (
-  "github.com/wsw365904/newcryptosm/x509"
+  "github.com/hellobchain/newcryptosm/x509"
   "encoding/pem"
   "fmt"
   "github.com/grantae/certinfo"

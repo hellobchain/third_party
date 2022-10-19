@@ -8,8 +8,8 @@ package idemix
 
 import (
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
 )
 
 // Identity Mixer Credential is a list of attributes certified (signed) by the issuer

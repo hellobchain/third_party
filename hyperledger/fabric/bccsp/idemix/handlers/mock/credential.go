@@ -4,8 +4,8 @@ package mock
 import (
 	"sync"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp/idemix/handlers"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp/idemix/handlers"
 )
 
 type Credential struct {

@@ -21,7 +21,7 @@ under the License.
 
 package FP256BN
 
-import "github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
+import "github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
 
 const INVALID_PUBLIC_KEY int = -2
 const ERROR int = -3

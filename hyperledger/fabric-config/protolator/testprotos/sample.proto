@@ -16,7 +16,7 @@ limitations under the License.
 
 syntax = "proto3";
 
-option go_package = "github.com/wsw365904/third_party/fabric-config/protolator/testprotos";
+option go_package = "github.com/hellobchain/third_party/fabric-config/protolator/testprotos";
 
 package testprotos;
 

@@ -8,7 +8,7 @@ package membership
 
 import (
 	"crypto"
-	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/x509"
 )
 
 // KeyInfo represents a (secret) key that is either already stored

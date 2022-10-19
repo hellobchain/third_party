@@ -7,9 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package statsd
 
 import (
-	"github.com/wsw365904/third_party/go-kit/kit/metrics/statsd"
-	"github.com/wsw365904/third_party/hyperledger/fabric/common/metrics"
-	"github.com/wsw365904/third_party/hyperledger/fabric/common/metrics/internal/namer"
+	"github.com/hellobchain/third_party/go-kit/kit/metrics/statsd"
+	"github.com/hellobchain/third_party/hyperledger/fabric/common/metrics"
+	"github.com/hellobchain/third_party/hyperledger/fabric/common/metrics/internal/namer"
 )
 
 const defaultFormat = "%{#fqname}"

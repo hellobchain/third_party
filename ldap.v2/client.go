@@ -1,7 +1,7 @@
 package ldap
 
 import (
-	"github.com/wsw365904/newcryptosm/tls"
+	"github.com/hellobchain/newcryptosm/tls"
 	"time"
 )
 

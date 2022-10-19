@@ -7,12 +7,12 @@ SPDX-License-Identifier: Apache-2.0
 package pkcs11
 
 import (
-	"github.com/wsw365904/newcryptosm/ecdsa"
 	"crypto/elliptic"
 	"crypto/sha256"
 	"encoding/asn1"
 	"encoding/hex"
 	"fmt"
+	"github.com/hellobchain/newcryptosm/ecdsa"
 	"math/big"
 	"sync"
 

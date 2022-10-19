@@ -26,11 +26,11 @@ import (
 	"unicode/utf8"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/wsw365904/third_party/prometheus/common/expfmt"
+	"github.com/hellobchain/third_party/prometheus/common/expfmt"
 
 	dto "github.com/prometheus/client_model/go"
 
-	"github.com/wsw365904/third_party/prometheus/client_golang/prometheus/internal"
+	"github.com/hellobchain/third_party/prometheus/client_golang/prometheus/internal"
 )
 
 const (

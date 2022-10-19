@@ -7,7 +7,7 @@ package binding
 import (
 	"bytes"
 	"io"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 
 	"gopkg.in/yaml.v2"
 )

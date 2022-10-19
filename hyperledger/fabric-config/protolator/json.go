@@ -10,7 +10,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext"
 	"io"
 	"io/ioutil"
 	"reflect"

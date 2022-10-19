@@ -1,8 +1,8 @@
 package algo
 
 import (
-	"github.com/wsw365904/newcryptosm"
-	"github.com/wsw365904/wswlog/wlogging"
+	"github.com/hellobchain/newcryptosm"
+	"github.com/hellobchain/wswlog/wlogging"
 )
 
 var sm2AlgoFlag bool

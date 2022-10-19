@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"io/ioutil"
 	"mime/multipart"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

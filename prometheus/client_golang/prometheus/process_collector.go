@@ -17,7 +17,7 @@ import (
 	"errors"
 	"os"
 
-	"github.com/wsw365904/third_party/prometheus/procfs"
+	"github.com/hellobchain/third_party/prometheus/procfs"
 )
 
 type processCollector struct {

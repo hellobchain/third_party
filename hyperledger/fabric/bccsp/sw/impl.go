@@ -16,12 +16,12 @@ limitations under the License.
 package sw
 
 import (
-	"github.com/wsw365904/wswlog/wlogging"
+	"github.com/hellobchain/wswlog/wlogging"
 	"hash"
 	"reflect"
 
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 )
 
 var _ bccsp.BCCSP = (*CSP)(nil)

@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"strconv"
 	"strings"
 )
@@ -139,10 +139,10 @@ func (ch *cors) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 // Example:
 //
 //  import (
-//      "github.com/wsw365904/newcryptosm/http"
+//      "github.com/hellobchain/newcryptosm/http"
 //
-//      "github.com/wsw365904/third_party/gorilla/handlers"
-//      "github.com/wsw365904/third_party/gorilla/mux"
+//      "github.com/hellobchain/third_party/gorilla/handlers"
+//      "github.com/hellobchain/third_party/gorilla/mux"
 //  )
 //
 //  func main() {

@@ -8,8 +8,8 @@ package configtx
 
 import (
 	"bytes"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/commonext"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/commonext"
 	"testing"
 
 	cb "github.com/hyperledger/fabric-protos-go/common"

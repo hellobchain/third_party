@@ -16,7 +16,7 @@ package prometheus
 import (
 	"bufio"
 	"compress/gzip"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"io"
 	"net"
 	"strconv"
@@ -24,7 +24,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/wsw365904/third_party/prometheus/common/expfmt"
+	"github.com/hellobchain/third_party/prometheus/common/expfmt"
 )
 
 // TODO(beorn7): Remove this whole file. It is a partial mirror of

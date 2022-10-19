@@ -6,7 +6,7 @@ package render
 
 import (
 	"fmt"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 )
 
 // Redirect contains the http request reference and redirects status code and location.

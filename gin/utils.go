@@ -6,7 +6,7 @@ package gin
 
 import (
 	"encoding/xml"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"os"
 	"path"
 	"reflect"

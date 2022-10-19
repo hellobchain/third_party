@@ -4,7 +4,7 @@
 
 package binding
 
-import "github.com/wsw365904/newcryptosm/http"
+import "github.com/hellobchain/newcryptosm/http"
 
 type queryBinding struct{}
 

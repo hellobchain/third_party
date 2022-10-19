@@ -9,8 +9,8 @@ package idemix
 import (
 	"github.com/golang/protobuf/proto"
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
 )
 
 // The Issuer secret ISk and public IPk keys are used to issue credentials and

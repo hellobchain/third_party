@@ -8,7 +8,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/wsw365904/third_party/gin/binding"
+	"github.com/hellobchain/third_party/gin/binding"
 )
 
 // EnvGinMode indicates environment name for gin mode.

@@ -7,9 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package idemix
 
 import (
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
 )
 
 // WBBKeyGen creates a fresh weak-Boneh-Boyen signature key pair (http://ia.cr/2004/171)

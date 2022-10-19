@@ -27,7 +27,7 @@ Here we define a key using a custom int type to avoid name collisions:
 	package foo
 
 	import (
-		"github.com/wsw365904/third_party/gorilla/context"
+		"github.com/hellobchain/third_party/gorilla/context"
 	)
 
 	type key int

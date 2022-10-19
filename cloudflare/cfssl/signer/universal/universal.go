@@ -2,16 +2,16 @@
 package universal
 
 import (
-	"github.com/wsw365904/newcryptosm/http"
-	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/x509"
 
-	"github.com/wsw365904/third_party/cloudflare/cfssl/certdb"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/config"
-	cferr "github.com/wsw365904/third_party/cloudflare/cfssl/errors"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/info"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/signer"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/signer/local"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/signer/remote"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/certdb"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/config"
+	cferr "github.com/hellobchain/third_party/cloudflare/cfssl/errors"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/info"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/signer"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/signer/local"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/signer/remote"
 )
 
 // Signer represents a universal signer which is both local and remote

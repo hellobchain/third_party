@@ -13,11 +13,11 @@ import (
 	"io"
 	"time"
 
-	"github.com/wsw365904/third_party/go-kit/kit/log"
-	"github.com/wsw365904/third_party/go-kit/kit/metrics"
-	"github.com/wsw365904/third_party/go-kit/kit/metrics/internal/lv"
-	"github.com/wsw365904/third_party/go-kit/kit/metrics/internal/ratemap"
-	"github.com/wsw365904/third_party/go-kit/kit/util/conn"
+	"github.com/hellobchain/third_party/go-kit/kit/log"
+	"github.com/hellobchain/third_party/go-kit/kit/metrics"
+	"github.com/hellobchain/third_party/go-kit/kit/metrics/internal/lv"
+	"github.com/hellobchain/third_party/go-kit/kit/metrics/internal/ratemap"
+	"github.com/hellobchain/third_party/go-kit/kit/util/conn"
 )
 
 // Statsd receives metrics observations and forwards them to a StatsD server.

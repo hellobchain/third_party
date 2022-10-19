@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package rwsetext_test
 
 import (
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/ledger/rwsetext"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/ledger/rwsetext"
 )
 
 // ensure structs implement expected interfaces

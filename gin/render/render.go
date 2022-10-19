@@ -4,7 +4,7 @@
 
 package render
 
-import "github.com/wsw365904/newcryptosm/http"
+import "github.com/hellobchain/newcryptosm/http"
 
 // Render interface is to be implemented by JSON, XML, HTML, YAML and so on.
 type Render interface {

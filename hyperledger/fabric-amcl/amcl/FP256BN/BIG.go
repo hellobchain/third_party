@@ -22,7 +22,7 @@ under the License.
 package FP256BN
 
 import "strconv"
-import "github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
+import "github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
 
 const MODBYTES uint = 32
 const BASEBITS uint = 56

@@ -8,15 +8,15 @@ package pkcs11
 
 import (
 	"crypto/rsa"
-	"github.com/wsw365904/newcryptosm/ecdsa"
-	"github.com/wsw365904/newcryptosm/x509"
-	"github.com/wsw365904/wswlog/wlogging"
+	"github.com/hellobchain/newcryptosm/ecdsa"
+	"github.com/hellobchain/newcryptosm/x509"
+	"github.com/hellobchain/wswlog/wlogging"
 	"os"
 
 	"github.com/miekg/pkcs11"
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp/sw"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp/sw"
 )
 
 var (

@@ -6,9 +6,9 @@ package gin
 
 import (
 	"fmt"
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http/httptest"
 	"io/ioutil"
-	"github.com/wsw365904/newcryptosm/http"
-	"github.com/wsw365904/newcryptosm/http/httptest"
 	"os"
 	"path/filepath"
 	"testing"

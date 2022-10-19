@@ -6,12 +6,12 @@ package gin
 
 import (
 	"bytes"
-	"github.com/wsw365904/newcryptosm/http"
-	"github.com/wsw365904/newcryptosm/http/httptest"
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http/httptest"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/wsw365904/third_party/gin/binding"
+	"github.com/hellobchain/third_party/gin/binding"
 )
 
 func TestBindWith(t *testing.T) {

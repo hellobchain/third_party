@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/wsw365904/third_party/prometheus/common/model"
+	"github.com/hellobchain/third_party/prometheus/common/model"
 )
 
 // metricVec is a Collector to bundle metrics of the same name that differ in

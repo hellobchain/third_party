@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
-	"github.com/wsw365904/newcryptosm/sm4"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/newcryptosm/sm4"
 )
 
 // GetRandomBytes returns len random looking bytes

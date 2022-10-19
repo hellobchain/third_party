@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	stderr "errors"
 	"fmt"
-	"github.com/wsw365904/newcryptosm/http"
-	"github.com/wsw365904/newcryptosm/tls"
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/tls"
 	"io/ioutil"
 	"net"
 	"net/url"
@@ -15,11 +15,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/wsw365904/third_party/cloudflare/cfssl/api"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/auth"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/errors"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/info"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/log"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/api"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/auth"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/errors"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/info"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/log"
 )
 
 // A server points to a single remote CFSSL instance.

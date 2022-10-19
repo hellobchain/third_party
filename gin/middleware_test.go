@@ -6,12 +6,12 @@ package gin
 
 import (
 	"errors"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"strings"
 	"testing"
 
+	"github.com/hellobchain/third_party/sse"
 	"github.com/stretchr/testify/assert"
-	"github.com/wsw365904/third_party/sse"
 )
 
 func TestMiddlewareGeneralCase(t *testing.T) {

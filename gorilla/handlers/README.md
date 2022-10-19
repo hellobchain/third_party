@@ -33,8 +33,8 @@ A simple example using `handlers.LoggingHandler` and `handlers.CompressHandler`:
 
 ```go
 import (
-    "github.com/wsw365904/newcryptosm/http"
-    "github.com/wsw365904/third_party/gorilla/handlers"
+    "github.com/hellobchain/newcryptosm/http"
+    "github.com/hellobchain/third_party/gorilla/handlers"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module github.com/wsw365904/third_party
+module github.com/hellobchain/third_party
 
 go 1.16
 
@@ -9,6 +9,8 @@ require (
 	github.com/go-playground/validator/v10 v10.10.0
 	github.com/golang/protobuf v1.5.2
 	github.com/google/certificate-transparency-go v1.1.3
+	github.com/hellobchain/newcryptosm v0.0.0-20221019060107-edb949a317e9
+	github.com/hellobchain/wswlog v0.0.0-20221019060629-971ee56a4abf
 	github.com/hyperledger/fabric-protos-go v0.0.0-20220816110612-c96c610ca7b4
 	github.com/jmhodges/clock v1.2.0
 	github.com/jmoiron/sqlx v1.3.5
@@ -17,15 +19,13 @@ require (
 	github.com/mattn/go-isatty v0.0.14
 	github.com/matttproud/golang_protobuf_extensions v1.0.1
 	github.com/miekg/pkcs11 v1.1.1
-	github.com/onsi/gomega v1.20.0
+	github.com/onsi/gomega v1.20.2
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_model v0.2.0
 	github.com/spf13/viper v1.8.1
 	github.com/stretchr/testify v1.8.0
 	github.com/swaggo/swag v1.8.1
 	github.com/ugorji/go/codec v1.2.7
-	github.com/wsw365904/newcryptosm v0.0.0-20220903144440-10a6eb007dbe
-	github.com/wsw365904/wswlog v0.0.0-20220826082513-787d040d761f
 	go.uber.org/zap v1.22.0
 	golang.org/x/crypto v0.0.0-20220817201139-bc19a97f63c8
 	golang.org/x/net v0.0.0-20220812174116-3211cb980234

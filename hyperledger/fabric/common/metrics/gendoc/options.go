@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/wsw365904/third_party/hyperledger/fabric/common/metrics"
+	"github.com/hellobchain/third_party/hyperledger/fabric/common/metrics"
 	"golang.org/x/tools/go/packages"
 )
 
@@ -70,7 +70,7 @@ func FileOptions(f *ast.File) ([]interface{}, error) {
 				if !ok {
 					continue
 				}
-				if imports[ident.Name] != "github.com/wsw365904/newcryptosm/metrics" {
+				if imports[ident.Name] != "github.com/hellobchain/newcryptosm/metrics" {
 					continue
 				}
 				option, err := createOption(literalType)

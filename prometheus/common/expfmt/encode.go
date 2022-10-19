@@ -15,11 +15,11 @@ package expfmt
 
 import (
 	"fmt"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"io"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/wsw365904/third_party/prometheus/common/internal/bitbucket.org/ww/goautoneg"
+	"github.com/hellobchain/third_party/prometheus/common/internal/bitbucket.org/ww/goautoneg"
 	"github.com/matttproud/golang_protobuf_extensions/pbutil"
 
 	dto "github.com/prometheus/client_model/go"

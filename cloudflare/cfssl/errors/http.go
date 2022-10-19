@@ -2,7 +2,7 @@ package errors
 
 import (
 	"errors"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 )
 
 // HTTPError is an augmented error with a HTTP status code.

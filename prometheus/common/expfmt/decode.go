@@ -15,7 +15,7 @@ package expfmt
 
 import (
 	"fmt"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"io"
 	"math"
 	"mime"
@@ -23,7 +23,7 @@ import (
 	dto "github.com/prometheus/client_model/go"
 
 	"github.com/matttproud/golang_protobuf_extensions/pbutil"
-	"github.com/wsw365904/third_party/prometheus/common/model"
+	"github.com/hellobchain/third_party/prometheus/common/model"
 )
 
 // Decoder types decode an input stream into metric families.

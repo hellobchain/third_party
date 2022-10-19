@@ -10,9 +10,9 @@ import (
 	"crypto/rand"
 	"crypto/sha256"
 
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl/FP256BN"
 )
 
 // GenG1 is a generator of Group G1

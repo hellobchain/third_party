@@ -296,10 +296,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/wsw365904/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http"
 	"strings"
 
-	"github.com/wsw365904/third_party/gorilla/mux"
+	"github.com/hellobchain/third_party/gorilla/mux"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -357,12 +357,12 @@ import (
     "context"
     "flag"
     "log"
-    "github.com/wsw365904/newcryptosm/http"
+    "github.com/hellobchain/newcryptosm/http"
     "os"
     "os/signal"
     "time"
 
-    "github.com/wsw365904/third_party/gorilla/mux"
+    "github.com/hellobchain/third_party/gorilla/mux"
 )
 
 func main() {
@@ -526,7 +526,7 @@ Our test code:
 package main
 
 import (
-    "github.com/wsw365904/newcryptosm/http"
+    "github.com/hellobchain/newcryptosm/http"
     "net/http/httptest"
     "testing"
 )
@@ -625,9 +625,9 @@ Here's a complete, runnable example of a small `mux` based server:
 package main
 
 import (
-    "github.com/wsw365904/newcryptosm/http"
+    "github.com/hellobchain/newcryptosm/http"
     "log"
-    "github.com/wsw365904/third_party/gorilla/mux"
+    "github.com/hellobchain/third_party/gorilla/mux"
 )
 
 func YourHandler(w http.ResponseWriter, r *http.Request) {

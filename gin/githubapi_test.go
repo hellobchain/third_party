@@ -8,8 +8,8 @@ import (
 	"bytes"
 	"fmt"
 	"math/rand"
-	"github.com/wsw365904/newcryptosm/http"
-	"github.com/wsw365904/newcryptosm/http/httptest"
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/newcryptosm/http/httptest"
 	"os"
 	"testing"
 

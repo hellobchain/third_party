@@ -8,7 +8,7 @@ package protolator
 
 import (
 	"bytes"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/testprotos"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/testprotos"
 	"testing"
 
 	. "github.com/onsi/gomega"

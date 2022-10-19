@@ -6,19 +6,19 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/wsw365904/newcryptosm/tls"
-	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/tls"
+	"github.com/hellobchain/newcryptosm/x509"
 	"io/ioutil"
 	"regexp"
 	"strconv"
 	"strings"
 	"time"
 
-	"github.com/wsw365904/third_party/cloudflare/cfssl/auth"
-	cferr "github.com/wsw365904/third_party/cloudflare/cfssl/errors"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/helpers"
-	"github.com/wsw365904/third_party/cloudflare/cfssl/log"
-	ocspConfig "github.com/wsw365904/third_party/cloudflare/cfssl/ocsp/config"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/auth"
+	cferr "github.com/hellobchain/third_party/cloudflare/cfssl/errors"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/helpers"
+	"github.com/hellobchain/third_party/cloudflare/cfssl/log"
+	ocspConfig "github.com/hellobchain/third_party/cloudflare/cfssl/ocsp/config"
 )
 
 // A CSRWhitelist stores booleans for fields in the CSR. If a CSRWhitelist is

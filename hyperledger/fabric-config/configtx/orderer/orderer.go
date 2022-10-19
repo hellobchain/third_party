@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package orderer
 
 import (
-	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm/x509"
 )
 
 const (

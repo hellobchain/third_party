@@ -19,9 +19,9 @@ import (
 	"crypto"
 	"io"
 
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp/utils"
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp/utils"
 )
 
 // bccspCryptoSigner is the BCCSP-based implementation of a crypto.Signer

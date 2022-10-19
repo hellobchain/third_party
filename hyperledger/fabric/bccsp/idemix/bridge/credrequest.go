@@ -10,9 +10,9 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/pkg/errors"
-	"github.com/wsw365904/third_party/hyperledger/fabric-amcl/amcl"
-	"github.com/wsw365904/third_party/hyperledger/fabric/bccsp/idemix/handlers"
-	cryptolib "github.com/wsw365904/third_party/hyperledger/fabric/idemix"
+	"github.com/hellobchain/third_party/hyperledger/fabric-amcl/amcl"
+	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp/idemix/handlers"
+	cryptolib "github.com/hellobchain/third_party/hyperledger/fabric/idemix"
 )
 
 // CredRequest encapsulates the idemix algorithms to produce (sign) a credential request

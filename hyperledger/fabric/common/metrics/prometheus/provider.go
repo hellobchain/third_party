@@ -7,10 +7,10 @@ SPDX-License-Identifier: Apache-2.0
 package prometheus
 
 import (
-	kitmetrics "github.com/wsw365904/third_party/go-kit/kit/metrics"
-	"github.com/wsw365904/third_party/go-kit/kit/metrics/prometheus"
-	"github.com/wsw365904/third_party/hyperledger/fabric/common/metrics"
-	prom "github.com/wsw365904/third_party/prometheus/client_golang/prometheus"
+	kitmetrics "github.com/hellobchain/third_party/go-kit/kit/metrics"
+	"github.com/hellobchain/third_party/go-kit/kit/metrics/prometheus"
+	"github.com/hellobchain/third_party/hyperledger/fabric/common/metrics"
+	prom "github.com/hellobchain/third_party/prometheus/client_golang/prometheus"
 )
 
 type Provider struct{}

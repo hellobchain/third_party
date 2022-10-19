@@ -1,7 +1,7 @@
 package swaggerFiles
 
 import (
-	"github.com/wsw365904/third_party/gin-swagger/webdav"
+	"github.com/hellobchain/third_party/gin-swagger/webdav"
 )
 
 func NewHandler() *webdav.Handler {

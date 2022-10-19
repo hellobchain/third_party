@@ -13,8 +13,8 @@ import (
 	"crypto/rsa"
 	"crypto/sha1"
 	"encoding/pem"
-	"github.com/wsw365904/newcryptosm"
-	"github.com/wsw365904/newcryptosm/x509"
+	"github.com/hellobchain/newcryptosm"
+	"github.com/hellobchain/newcryptosm/x509"
 	"sync"
 )
 

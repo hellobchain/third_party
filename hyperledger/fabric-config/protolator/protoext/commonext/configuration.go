@@ -8,8 +8,8 @@ package commonext
 
 import (
 	"fmt"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/ordererext"
-	"github.com/wsw365904/third_party/hyperledger/fabric-config/protolator/protoext/peerext"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/ordererext"
+	"github.com/hellobchain/third_party/hyperledger/fabric-config/protolator/protoext/peerext"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric-protos-go/common"
