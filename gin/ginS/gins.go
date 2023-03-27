@@ -6,8 +6,10 @@ package ginS
 
 import (
 	"html/template"
-	"github.com/hellobchain/newcryptosm/http"
 	"sync"
+
+	"github.com/hellobchain/newcryptosm/http"
+	"github.com/hellobchain/third_party/gin"
 )
 
 var once sync.Once

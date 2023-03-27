@@ -9,9 +9,11 @@ import (
 	"crypto/elliptic"
 	"encoding/pem"
 	"fmt"
+	"reflect"
+
+	"github.com/hellobchain/newcryptosm"
 	"github.com/hellobchain/newcryptosm/ecdsa"
 	"github.com/hellobchain/newcryptosm/x509"
-	"reflect"
 
 	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 	"github.com/pkg/errors"
@@ -46,9 +48,9 @@ func (k *revocationSecretKey) SKI() []byte {
 	raw := elliptic.Marshal(k.privKey.Curve, k.privKey.PublicKey.X, k.privKey.PublicKey.Y)
 
 	// Hash it
-	hash := x509.SHA256.New()
+	hash := newcryptosm.SHA256.New()
 	if ecdsa.IsSM2(k.privKey.Params()) {
-		hash = x509.SM3.New()
+		hash = newcryptosm.SM3.New()
 	}
 	hash.Write(raw)
 	return hash.Sum(nil)
@@ -96,9 +98,9 @@ func (k *revocationPublicKey) SKI() []byte {
 	raw := elliptic.Marshal(k.pubKey.Curve, k.pubKey.X, k.pubKey.Y)
 
 	// Hash it
-	hash := x509.SHA256.New()
+	hash := newcryptosm.SHA256.New()
 	if ecdsa.IsSM2(k.pubKey.Params()) {
-		hash = x509.SM3.New()
+		hash = newcryptosm.SM3.New()
 	}
 	hash.Write(raw)
 	return hash.Sum(nil)

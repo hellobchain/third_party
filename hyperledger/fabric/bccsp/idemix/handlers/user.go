@@ -6,8 +6,7 @@ SPDX-License-Identifier: Apache-2.0
 package handlers
 
 import (
-	"github.com/hellobchain/newcryptosm/x509"
-
+	"github.com/hellobchain/newcryptosm"
 	"github.com/hellobchain/third_party/hyperledger/fabric/bccsp"
 	"github.com/pkg/errors"
 )
@@ -37,7 +36,7 @@ func (k *userSecretKey) SKI() []byte {
 	if err != nil {
 		return nil
 	}
-	hash := x509.SHA256.New()
+	hash := newcryptosm.SHA256.New()
 	hash.Write(raw)
 	return hash.Sum(nil)
 }
